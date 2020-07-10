@@ -8,47 +8,6 @@ $(document).ready(function(){
     alert("Form is successfully submitted");
   });
 });
-
-  function validate() {
-      
-         if( document.myForm.last_name.value == "" ) {
-            alert( "Please provide your name!" );
-            document.myForm.last_name.focus() ;
-            return false;
-         }
-		 
-		 else if( document.myForm.first_name.value == "" ) {
-            alert( "Please provide your name!" );
-            document.myForm.first_name.focus() ;
-            return false;
-         }
-		 
-
-         else if( document.myForm.email.value == "" ) {
-            alert( "Please provide your Email!" );
-            document.myForm.email.focus() ;
-            return false;
-         }
-         else if( document.myForm.employee_id.value == "" || isNaN( document.myForm.ID.value ) ||
-            document.myForm.employee_id.value.length != 5 ) {
-            
-            alert( "Please provide an Id in the correct format ." );
-            document.myForm.employee_id.focus() ;
-            return false;
-         }
-          else if( document.myForm.password.value == "" ) {
-            alert( "Please provide your valid Password!" );
-            document.myForm.password.focus() ;
-            return false;
-			}
-			
-		if( document.myForm.designation.value == "" ) {
-            alert( "Please provide your designation!" );
-            document.myForm.designation.focus() ;
-            return false;
-			}
-         return( true );
-      }
 </script>
 
 <title> Registration Form </title>
@@ -66,7 +25,7 @@ $(document).ready(function(){
 <!-- container -->
 <div class="container">
     <section id="content">
-        <form action="insertRegistration.php" method="POST" name = "myForm" onsubmit = "return(validate());">
+        <form action="insertRegistration.php" method="POST">
             <h1>Registration Form</h1>
 
 <!-- form -->			

@@ -11,8 +11,8 @@
 
 <div class="bg-text">
 	
-	<h2><b>Project Tacking System is a system that aims at tracking different projects in an organization or company.  </b></h2>
-<h2><b>"Track your projects as you go"</b></h2>
+	<h2><b>PMS is a system where you can plan, organize, and handle different projects that have been done. With PMS, you are able to manage, track and search for your projects easily, in an advanced manner.</b></h2>
+
 </div>
 
 <form action="signup.php" method="post">

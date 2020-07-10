@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
 $(document).ready(function(){
   $("form").submit(function(){
@@ -86,7 +86,7 @@ theToggle.onclick = function() {
 <!-- container -->
 <div class="container">
     <section id="content">
-        <form action="insertProj.php" method="POST">
+        <form action="insertRegistration.php" method="POST">
             <h1>Upload Project</h1>
 
 <!-- form -->			

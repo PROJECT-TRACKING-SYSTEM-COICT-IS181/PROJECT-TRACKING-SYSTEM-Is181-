@@ -18,7 +18,7 @@ $count = mysqli_num_rows($result);
 if($count == 1) {
 $_SESSION['email'] = $dbemail;
 
-header("Location: upload.php");  
+header("Location: dashboard.php");  
 } else{
     $message = "Username and/or Password incorrect.\\nPlease Try again.";
   echo "<script type='text/javascript'>alert('$message');</script>";
@@ -30,8 +30,6 @@ header("Location: upload.php");
 <!DOCTYPE html>
 <html>
 <head>
-
-
 <title>Login</title>
 <link rel="stylesheet" type="text/css" href="css/log in.css">
 </head>
@@ -63,7 +61,7 @@ header("Location: upload.php");
 <div>
     <input type="submit" value="Log in" name="submit" />
 	
-	<a href="../MANAGER/login.php">Manager</a>
+	
 	<a href="signup.php">Register</a>
 </div>
 
