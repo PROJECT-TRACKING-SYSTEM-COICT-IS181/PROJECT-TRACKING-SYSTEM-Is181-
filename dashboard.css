@@ -1,0 +1,206 @@
+/* body style */
+body 
+{
+    background: #DCDDDF url(https://cssdeck.com/uploads/media/items/7/7AF2Qzt.png);
+    color: #000;
+    font: 14px Arial;
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+	overflow: hidden;
+}
+
+/* style header */
+h1
+{ 
+	font-family: "Lucida Console", Courier, monospace;
+	font-size:30px;
+	color:#563D64;
+}
+
+
+small{ font-size:10px;}
+b, strong{ font-weight:bold;}
+a{ text-decoration: none; }
+
+
+a:hover
+{
+	text-decoration: underline;
+}
+
+/* Style the header links */
+.header 
+{
+	overflow: hidden;
+	background-color: #f1f1f1;
+	height: 80px;
+	padding: 20px 10px;
+}
+
+
+
+/* Float the link section to the left */
+.header-left 
+{
+  float: left;
+  position: absolute;
+  top: 5%;
+  left: 34%;
+}
+
+/* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */ 
+@media screen and (max-width: 500px) {
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+ 
+}
+.sidebar {
+	background-color: #333;
+	position: fixed;
+	transition: width 0.2s ease;
+}
+
+.sidebar nav {
+	height: 100%;
+}
+
+.sidebar .sidebar__nav {
+	display: flex;
+	height: 100%;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.sidebar .sidebar__nav .sidebar__nav__link {
+	align-items: center;
+	color: #bbb;
+	display: flex;
+	padding-left: 20px;
+	text-decoration: none;
+	transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.sidebar .sidebar__nav .sidebar__nav__link:hover {
+	background-color: rgba(0, 0, 0, 0.15);
+	color: #80f;
+}
+
+.sidebar .sidebar__nav .sidebar__nav__text {
+	display: none;
+	margin-left: 10px;
+	margin-right: auto;
+	white-space: nowrap;
+}
+
+.sidebar .sidebar__nav i {
+	align-items: center;
+	display: flex;
+	justify-content: center;
+}
+
+@media (max-width: 572px) {
+	.sidebar {
+		bottom: 0;
+		width: 100%;
+	}
+
+	.sidebar .sidebar__nav {
+		justify-content: center;
+	}
+
+	.sidebar .sidebar__nav .sidebar__nav__link {
+		height: 100%;
+		padding: 0.75em;
+	}
+
+	.sidebar .sidebar__nav i {
+		font-size: 2rem;
+	}
+}
+
+@media (min-width: 572px) {
+	.sidebar {
+		height: 100vh;
+		left: 0;
+		width: var(--sidebar-width);
+	}
+
+	.sidebar:hover {
+		width: 14rem;
+	}
+
+	.sidebar .sidebar__nav {
+		flex-direction: column;
+	}
+
+	
+
+	.sidebar .sidebar__nav .sidebar__nav__link {
+		padding: 1em;
+	}
+
+	.sidebar:hover .sidebar__nav .sidebar__nav__text {
+		display: inline;
+	}
+
+	.sidebar .sidebar__nav i {
+		font-size: 2.5rem;
+	}
+}
+
+@media (max-height: 434px) {
+	.sidebar {
+		overflow-y: scroll;
+	}
+}
+
+:root {
+  --sidebar-width: 4.5em;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto';
+}
+
+* {
+  outline: none;
+  box-sizing: border-box;
+}
+
+.main {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 992px;
+  padding: 2em 1.5em;
+}
+
+.main h2 {
+  font-size: 2em;
+  margin-top: 0px;
+}
+
+.main p {
+  color: #444;
+  font-size: 1.25em;
+  line-height: 2;
+  text-align: justify;
+}
+
+@media (min-width: 572px) {
+  .main {
+    margin-left: var(--sidebar-width);
+  }
+}
+
+@media (min-width: 992px) {
+  .main {
+    padding: 2.5em;
+  }
+}

@@ -43,7 +43,7 @@ form:after
 {
 	margin: 25px auto;
 	position: relative; 
-	top: 1px; 
+	top: 40px; 
 	left: 10px; 
 	width: 1000px; 
 }
@@ -200,9 +200,9 @@ form:after
 
 #username { background-position: 10px 10px !important }
 #password { background-position: 10px -53px !important }
+#designation { background-position: 10px 10px !important }
+#pnumber { background-position: 10px 10px !important }
 #email { background-position: 10px 10px !important }
-#empcode {  background-position: 10px -53px !important }
-#title { background-position: 10px 10px !important }
 #content form input[type="submit"] {
     background: rgb(254,231,154);
     background: -moz-linear-gradient(top,  rgba(254,231,154,1) 0%, rgba(254,193,81,1) 100%);
