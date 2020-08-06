@@ -16,7 +16,7 @@ body
 /* style header */
 h1
 { 
-	font-size:30px;
+	font-size:35px;
 	font-family: "Lucida Console", Courier, monospace;
 	color:#563D64;
 }
@@ -315,8 +315,8 @@ form:after
 {
   float: left;
   position: absolute;
-  top: 3%;
-  left: 35%;
+  top: 2%;
+  left: 30%;
 }
 
 /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */ 
