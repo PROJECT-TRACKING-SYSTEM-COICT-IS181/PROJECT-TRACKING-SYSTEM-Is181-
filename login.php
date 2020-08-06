@@ -1,35 +1,41 @@
- 
 <?php
-  include('conn.php');
-  session_start();
+session_start();
+include "conn.php";
+if($_SERVER["REQUEST_METHOD"] == "POST") {
 
-  if($_SERVER["REQUEST_METHOD"] == "POST") {
+$user = mysqli_real_escape_string($conn,$_POST['employee_name']);
 
-$dbemail = mysqli_real_escape_string($conn,$_POST['email']);
-$dbpassword = mysqli_real_escape_string($conn,$_POST['password']);
-
-$sql = "SELECT email, password FROM registration WHERE email='$dbemail' AND password='$dbpassword'";
-$result = mysqli_query($conn,$sql);
+$password = mysqli_real_escape_string($conn,$_POST['password']);
 
 
 
-$count = mysqli_num_rows($result);
-
-if($count == 1) {
-$_SESSION['email'] = $dbemail;
-
-header("Location: dashboard.php");  
-} else{
-    $message = "Username and/or Password incorrect.\\nPlease Try again.";
-  echo "<script type='text/javascript'>alert('$message');</script>";
-
-
-}
+    $sql = mysqli_query($conn, "SELECT * FROM registration WHERE employee_name='$user' AND password='$password'");
+    if(mysqli_num_rows($sql)==1){
+        $qry = mysqli_fetch_array($sql);
+        $_SESSION['employee_name'] = $qry['employee_name'];
+        $_SESSION['password'] = $qry['password'];
+        $_SESSION['designation'] = $qry['designation'];
+        if($qry['designation']=="Admin"){
+            header("location:MANAGER/dashboard.php");
+        }else if($qry['designation']=="user"){
+            header("location:EMPLOYEE/dashboard.php");
+        }
+    }else{
+        ?>
+        <script language="JavaScript">
+            alert('Username or Password incorrect.\n Please Try again.');
+            document.location='index.php';
+        </script>
+        <?php
+    }
 }
 ?>
+
 <!DOCTYPE html>
 <html>
 <head>
+
+
 <title>Login</title>
 <link rel="stylesheet" type="text/css" href="css/log in.css">
 </head>
@@ -51,7 +57,7 @@ header("Location: dashboard.php");
 	<h1>Login Form</h1>
 
 <div>
-    <input type="text" placeholder="Username" name="email" required="" id="username" />
+    <input type="text" placeholder="Username" name="employee_name" required="" id="username" />
 </div>
 
 <div>

@@ -8,6 +8,47 @@ $(document).ready(function(){
     alert("Form is successfully submitted");
   });
 });
+
+  function validate() {
+      
+         if( document.myForm.last_name.value == "" ) {
+            alert( "Please provide your name!" );
+            document.myForm.last_name.focus() ;
+            return false;
+         }
+		 
+		 else if( document.myForm.first_name.value == "" ) {
+            alert( "Please provide your name!" );
+            document.myForm.first_name.focus() ;
+            return false;
+         }
+		 
+
+         else if( document.myForm.email.value == "" ) {
+            alert( "Please provide your Email!" );
+            document.myForm.email.focus() ;
+            return false;
+         }
+         else if( document.myForm.employee_id.value == "" || isNaN( document.myForm.ID.value ) ||
+            document.myForm.employee_id.value.length != 5 ) {
+            
+            alert( "Please provide an Id in the correct format ." );
+            document.myForm.employee_id.focus() ;
+            return false;
+         }
+          else if( document.myForm.password.value == "" ) {
+            alert( "Please provide your valid Password!" );
+            document.myForm.password.focus() ;
+            return false;
+			}
+			
+		if( document.myForm.designation.value == "" ) {
+            alert( "Please provide your designation!" );
+            document.myForm.designation.focus() ;
+            return false;
+			}
+         return( true );
+      }
 </script>
 
 <title> Registration Form </title>
@@ -25,14 +66,14 @@ $(document).ready(function(){
 <!-- container -->
 <div class="container">
     <section id="content">
-        <form action="insertRegistration.php" method="POST">
+        <form action="insertRegistration.php" method="POST" name = "myForm" onsubmit = "return(validate());">
             <h1>Registration Form</h1>
 
 <!-- form -->			
 <div>
-    <input type="text" placeholder="First name" name="first_name" required="" id="username" />
+    <input type="text" placeholder="Employee name" name="employee_name" required="" id="username" />
 	&nbsp &nbsp &nbsp
-	<input type="text" placeholder="Last name" name="last_name" required="" id="username" />
+   <input type="password" placeholder="Password" name="password" required="" id="password" />
 </div>
 
 	<br>
@@ -40,7 +81,7 @@ $(document).ready(function(){
 <div>
    <input type="email" placeholder="Email" name="email" required="" id="email" />
 	&nbsp &nbsp &nbsp
-    <input type="password" placeholder="Password" name="password" required="" id="password" />
+    <input type="text" placeholder="Phone Number" name="phone_number" required="" id="password" />
 </div>	
 
 	<br>
