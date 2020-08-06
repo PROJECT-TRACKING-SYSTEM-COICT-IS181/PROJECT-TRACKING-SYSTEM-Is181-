@@ -10,11 +10,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Progress Form</title>
-<link rel="stylesheet" type="text/css" href="css/progress.css">
+
+<script>
+$(document).ready(function(){
+  $("form").submit(function(){
+    alert("Form is successfully submitted");
+  });
+});
+</script>
+
+<title>Register Project </title>
+<link rel="stylesheet" type="text/css" href="css/upload.css">
 </head>
-
-
  
 <body>
 
@@ -32,7 +39,7 @@
 <div id="menu">
   <ul>
 	<li><a href="dashboard.php">DASHBOARD</a></li>
-	<li><a href="projects.php">ADD PROJECT</a></li>
+	<li><a href="progress.php">PROJECT PROGRESS</a></li>
     <li><a href="viewproj.php">VIEW PROJECTS</a></li>
 	<li><a href="../logout.php">LOGOUT</a></li>
   </ul>
@@ -85,35 +92,48 @@ theToggle.onclick = function() {
 </script>
 
 
+
+<!-- container -->
 <div class="container">
     <section id="content">
-	<!-- form -->
-<form action="insertProg.php" method="POST">
-<h1>Progress Form</h1>
+        <form action="insertProj.php" method="POST">
+            <h1>Register Project</h1>
+
+<!-- form -->			
+<div>
+    <input type="text" placeholder="Project name" name="project_name" required="" id="username" />
+	&nbsp &nbsp &nbsp
+	 <input type="text" placeholder="Start date" name="start_date" required="" id="username" />
+</div>
+
+	<br>
+	
+<div>
+	<input type="text" placeholder="Employee_ID" name="employee_id" required="" id="empcode" />
+   
+	&nbsp &nbsp &nbsp
+    <input type="text" placeholder="Employee_name" name="employee_name" required="" id="username" />
+</div>	
+
+	<br>
 
 <div>
-    <input type="text" placeholder="Project Name" name="project_name" required="" id="username" />
+ <textarea rows="2" cols="90" style="border-radius: 3px; border: 1px solid; font: 15px Helvetica, Arial, sans-serif;" name="description" placeholder="Description" required></textarea>
+	
 </div>
 
 <div>
-	<select name="progress" id="username" style="width: 95%;"> 
-	<option value="" disabled selected hidden>Status</option>
-	<option value="Documentation">Documentation</option>
-	<option value="System Analysis and Design">System Analysis and Design</option>
-	<option value="System Implementation and Prototype testing">System Implementation and Prototype Testing</option>
-	<option value="Report Writing">Report Writing</option>
-	</select>
-
+    <input type="submit" value="Register" name="submit" />
 </div>
 
 <div>
-    <input type="submit" value="Submit" name="submit" />
-		<a href="updateprog.php">Update</a>
+    <input type="reset" value="Reset" name="reset" />
 </div>
+
 
 </form>
-       
+	
 </section><!-- content -->
-</div><!-- container -->
+
+</div>
 </body>
-</html>

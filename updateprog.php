@@ -7,11 +7,36 @@
   }
   
   ?>
+  
+<?php
+require_once 'conn.php';
+if (isset($_POST['submit'])) {
+		$pn=$_POST['project_name'];
+		$pg=$_POST['progress'];
+		
+
+	mysqli_query($conn,"UPDATE progress SET project_name='$pn', progress='$pg' WHERE project_name='$pn'");//update query
+	
+header('location:viewproj.php');
+}
+
+
+
+
+?>
+
+
+
+
+
+
+
+
 <!DOCTYPE html>
 <html>
 <head>
 <title>Progress Form</title>
-<link rel="stylesheet" type="text/css" href="css/progress.css">
+<link rel="stylesheet" type="text/css" href="css/updatep.css">
 </head>
 
 
@@ -31,7 +56,7 @@
 
 <div id="menu">
   <ul>
-	<li><a href="dashboard.php">DASHBOARD</a></li>
+	<li><a href="projects.php">DASHBOARD</a></li>
 	<li><a href="projects.php">ADD PROJECT</a></li>
     <li><a href="viewproj.php">VIEW PROJECTS</a></li>
 	<li><a href="../logout.php">LOGOUT</a></li>
@@ -88,7 +113,7 @@ theToggle.onclick = function() {
 <div class="container">
     <section id="content">
 	<!-- form -->
-<form action="insertProg.php" method="POST">
+<form action="" method="POST">
 <h1>Progress Form</h1>
 
 <div>
@@ -108,7 +133,7 @@ theToggle.onclick = function() {
 
 <div>
     <input type="submit" value="Submit" name="submit" />
-		<a href="updateprog.php">Update</a>
+
 </div>
 
 </form>

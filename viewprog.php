@@ -10,12 +10,38 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Progress Form</title>
-<link rel="stylesheet" type="text/css" href="css/progress.css">
-</head>
+
+<script>
+$(document).ready(function(){
+  $("form").submit(function(){
+    alert("Form is successfully submitted");
+  });
+});
+</script>
 
 
  
+<script type="text/javascript">
+function printlayer(layer)
+{
+   var generator=window.open(",'name,");
+   var layertext = document.getElementById(layer);
+   generator.document.write(layertext.innerHTML.replace("print Me"));
+   
+   generator.document.close();
+   generator.print();
+   generator.close();
+
+}
+</script>
+
+<title>View Progress </title>
+<link rel="stylesheet" type="text/css" href="css/viewprog.css">
+</head>
+
+
+
+
 <body>
 
 <!-- header --> 
@@ -31,14 +57,14 @@
 
 <div id="menu">
   <ul>
+	
 	<li><a href="dashboard.php">DASHBOARD</a></li>
-	<li><a href="projects.php">ADD PROJECT</a></li>
-    <li><a href="viewproj.php">VIEW PROJECTS</a></li>
+	<li><a href="projects.php">ADD PROJECTS</a></li>
+	<li><a href="viewproj.php">VIEW PROJECTS</a></li>
 	<li><a href="../logout.php">LOGOUT</a></li>
   </ul>
 </div>
 
-</div>
 
 <script>
 var theToggle = document.getElementById('toggle');
@@ -85,35 +111,48 @@ theToggle.onclick = function() {
 </script>
 
 
-<div class="container">
-    <section id="content">
-	<!-- form -->
-<form action="insertProg.php" method="POST">
-<h1>Progress Form</h1>
 
-<div>
-    <input type="text" placeholder="Project Name" name="project_name" required="" id="username" />
+	<div id="div-id-name">
+
+
+    <table border="2" cellspacing="0" cellpadding="0" align=center>
+        <thead>
+            <tr>
+                <th>PROJECT NAME</th>
+				<th>EMPLOYEE NAME</th>
+				<th>PROGRESS</th>   
+            </tr>
+        </thead>
+        <tbody>
+		
+		<?php
+	include('conn.php');
+
+$sql = "SELECT progress.project_name, project.employee_name, progress.progress FROM progress INNER JOIN project ON progress.project_name = project.project_name WHERE employee_name = '$email'";
+
+
+
+if ($result = mysqli_query($conn, $sql)) {
+
+
+  while ($row = mysqli_fetch_assoc($result)) {
+
+        echo "<tr>
+		<td>".$row["project_name"]."</td>
+		<td>".$row["employee_name"]."</td>
+		<td>".$row["progress"]."</td>
+		</tr>";
+    }
+    
+    mysqli_free_result($result);
+}
+
+mysqli_close($conn);
+?>
+
+        </tbody>
+    </table>
 </div>
-
-<div>
-	<select name="progress" id="username" style="width: 95%;"> 
-	<option value="" disabled selected hidden>Status</option>
-	<option value="Documentation">Documentation</option>
-	<option value="System Analysis and Design">System Analysis and Design</option>
-	<option value="System Implementation and Prototype testing">System Implementation and Prototype Testing</option>
-	<option value="Report Writing">Report Writing</option>
-	</select>
-
-</div>
-
-<div>
-    <input type="submit" value="Submit" name="submit" />
-		<a href="updateprog.php">Update</a>
-</div>
-
-</form>
-       
-</section><!-- content -->
-</div><!-- container -->
+ 
 </body>
 </html>

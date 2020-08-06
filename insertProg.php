@@ -2,11 +2,11 @@
 	include('conn.php');
 	
 	
-	$projid=$_POST['projid'];
-	$pstatus=$_POST['status'];
+	$projname=$_POST['project_name'];
+	$progress=$_POST['progress'];
 	
-	mysqli_query($conn,"insert into progress (projid, status) values ('$projid', '$pstatus')");
-	header('location:viewproj.php');
+	mysqli_query($conn,"insert into progress (project_name, progress) values ('$projname', '$progress')");
+	header('location: viewproj.php');
 	
 	
 

@@ -10,12 +10,7 @@
 	$des=$_POST['designation'];
     
 	mysqli_query($conn,"insert into registration (employee_name, password, email, phone_number,  employee_id, designation) values ('$name', '$password', '$email', '$phoneno',  '$empcode', '$des')");
-	  ?>
-        <script language="JavaScript">
-            alert('Successfully registered. You can login');
-            document.location='index.php';
-        </script>
-        <?php
+	header('location:projects.php');
 	
 	
 
