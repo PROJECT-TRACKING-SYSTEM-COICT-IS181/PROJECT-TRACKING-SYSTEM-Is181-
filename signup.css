@@ -14,7 +14,7 @@ body
 /* style header */
 h1
 { 
-	font-size:30px;
+	font-size:35px;
 	font-family: "Lucida Console", Courier, monospace;
 	color:#563D64;
 }
@@ -46,6 +46,7 @@ form:after
 	top: 1px; 
 	left: 10px; 
 	width: 1000px; 
+	
 }
 
 /* size and shape of the container */	
@@ -300,7 +301,7 @@ form:after
 {
 	overflow: hidden;
 	background-color: #f1f1f1;
-	height: 60px;
+	height: 40px;
 	padding: 20px 10px;
 }
 
@@ -310,8 +311,8 @@ form:after
 {
   float: left;
   position: absolute;
-  top: 3%;
-  left: 35%;
+  top: -1%;
+  left: 30%;
 }
 
 /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */ 
