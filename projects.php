@@ -103,7 +103,7 @@ theToggle.onclick = function() {
 <div>
     <input type="text" placeholder="Project name" name="project_name" required="" id="username" />
 	&nbsp &nbsp &nbsp
-	 <input type="text" placeholder="Start date" name="start_date" required="" id="username" />
+	 <input type="date" placeholder="Start date" name="start_date" required="" id="username" />
 </div>
 
 	<br>

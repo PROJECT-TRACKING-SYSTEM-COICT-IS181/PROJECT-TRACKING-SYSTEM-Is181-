@@ -153,7 +153,7 @@ if ($result = mysqli_query($conn, $sql)) {
 		<td>".$row["project_name"]."</td>
 		<td>".$row["employee_id"]."</td>
 		<td>".$row["employee_name"]."</td>
-		<td>".$row["start_date"]."</td>
+		<td>".date('d-m-Y', strtotime($row["start_date"])) ."</td> 
 		<td>".$row["description"]."</td>
 		
          
