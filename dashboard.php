@@ -37,9 +37,9 @@
 </div>
 
 </div>
-
+<div class="bg">
 <div class="sidenav">
-	<a href="projects.php">Add Project</a>
+	<a href="projects.php">Register Project</a>
 	<a href="viewproj.php">View Projects</a>
 	<a href="progress.php">Project Progress</a>
 	<a href="viewprog.php">View Progress</a>
@@ -64,5 +64,5 @@
 </form>
 
 </div>
-
+</div>
 </body>
