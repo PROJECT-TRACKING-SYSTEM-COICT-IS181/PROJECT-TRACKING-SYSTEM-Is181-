@@ -1,56 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-
-<script>
-$(document).ready(function(){
-  $("form").submit(function(){
-    alert("Form is successfully submitted");
-  });
-});
-
-  function validate() {
-      
-         if( document.myForm.last_name.value == "" ) {
-            alert( "Please provide your name!" );
-            document.myForm.last_name.focus() ;
-            return false;
-         }
-		 
-		 else if( document.myForm.first_name.value == "" ) {
-            alert( "Please provide your name!" );
-            document.myForm.first_name.focus() ;
-            return false;
-         }
-		 
-
-         else if( document.myForm.email.value == "" ) {
-            alert( "Please provide your Email!" );
-            document.myForm.email.focus() ;
-            return false;
-         }
-         else if( document.myForm.employee_id.value == "" || isNaN( document.myForm.ID.value ) ||
-            document.myForm.employee_id.value.length != 5 ) {
-            
-            alert( "Please provide an Id in the correct format ." );
-            document.myForm.employee_id.focus() ;
-            return false;
-         }
-          else if( document.myForm.password.value == "" ) {
-            alert( "Please provide your valid Password!" );
-            document.myForm.password.focus() ;
-            return false;
-			}
-			
-		if( document.myForm.designation.value == "" ) {
-            alert( "Please provide your designation!" );
-            document.myForm.designation.focus() ;
-            return false;
-			}
-         return( true );
-      }
-</script>
-
 <title> Registration Form </title>
 <link rel="stylesheet" type="text/css" href="css/signup.css">
 </head>
@@ -63,8 +13,12 @@ $(document).ready(function(){
 </div>
 
 <body>
+<div class="bg">
+
 <!-- container -->
 <div class="container">
+
+<!-- content -->
     <section id="content">
         <form action="insertRegistration.php" method="POST" name = "myForm" onsubmit = "return(validate());">
             <h1>Registration Form</h1>
@@ -81,7 +35,7 @@ $(document).ready(function(){
 <div>
    <input type="email" placeholder="Email" name="email" required="" id="email" />
 	&nbsp &nbsp &nbsp
-    <input type="text" placeholder="Phone Number" name="phone_number" required="" id="password" />
+    <input type="text" placeholder="Phone Number" name="phone_number" required="" id="email" />
 </div>	
 
 	<br>
@@ -103,7 +57,8 @@ $(document).ready(function(){
 
 </form>
 	<p style="position: relative; left: 5px;"> Already a member? <a href="login.php">Sign in</a> </p>     
-</section><!-- content -->
+</section>
 
+</div>
 </div>
 </body>

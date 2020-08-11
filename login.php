@@ -47,7 +47,7 @@ $password = mysqli_real_escape_string($conn,$_POST['password']);
 
 <body>
 
-
+<div class="bg">
 <!-- container -->	
 <div class="container">
 <!-- content -->
@@ -75,6 +75,6 @@ $password = mysqli_real_escape_string($conn,$_POST['password']);
        
 </section>
 </div>
-
+</div>
 </body>
 </html>
