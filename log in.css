@@ -11,6 +11,23 @@ body
  
 }
 
+
+/* background image style */ 
+.bg
+{
+	 background-image: url("img2.jpg");
+
+    padding: 10px;
+    height: 570px;
+      margin: 0 auto;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+   
+}
+
+
 /* style header */
 h1
 { 

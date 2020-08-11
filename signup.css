@@ -11,6 +11,23 @@ body
  
 }
 
+
+
+/* background image style */ 
+.bg
+{
+	 background-image: url("img2.jpg");
+
+    padding: 10px;
+    height: 570px;
+     
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+   
+}
+
 /* style header */
 h1
 { 
@@ -311,8 +328,8 @@ form:after
 {
   float: left;
   position: absolute;
-  top: -1%;
-  left: 30%;
+  top: -0.5%;
+  left: 32%;
 }
 
 /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */ 
