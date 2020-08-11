@@ -13,6 +13,21 @@ body
  
 }
 
+/* background image style */ 
+.bg
+{
+	 background-image: url("img2.jpg");
+
+    padding: 10px;
+   height: 590px;
+      margin: 0 auto;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+   
+}
+
 /* style header */
 h1
 { 
@@ -53,7 +68,7 @@ h2
 {
   float: left;
   position: absolute;
-  top: 5%;
+  top: 2%;
   left: 30%;
 }
 
