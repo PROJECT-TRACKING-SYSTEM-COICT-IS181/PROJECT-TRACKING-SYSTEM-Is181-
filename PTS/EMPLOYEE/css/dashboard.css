@@ -1,0 +1,175 @@
+/* body style */
+body 
+{
+	   
+	background-position: center;
+    background: #DCDDDF url(https://cssdeck.com/uploads/media/items/7/7AF2Qzt.png);
+    color: #000;
+    font: 14px Arial;
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+	overflow: hidden;
+ 
+}
+
+/* background image style */ 
+.bg
+{
+	 background-image: url("img2.jpg");
+
+    padding: 10px;
+   height: 590px;
+      margin: 0 auto;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+   
+}
+
+/* style header */
+h1
+{ 
+	font-size:35px;
+	font-family: "Lucida Console", Courier, monospace;
+	color:#563D64;
+}
+
+h2
+{ 
+	font-size:20px;
+	font-family:"Courier New", Courier, monospace;
+	color:#563D64;
+}
+
+
+/* Style the header links */
+.header 
+{
+	overflow: hidden;
+	background-color: #f1f1f1;
+	height: 60px;
+	padding: 20px 10px;
+}
+
+/* Style the second header links */
+.header2 
+{
+	overflow: hidden;
+	background-color: #A9A9A9;
+	height: 3px;
+	padding: 20px 10px;
+}
+
+
+/* Float the head section to the left */
+.header-left 
+{
+  float: left;
+  position: absolute;
+  top: 2%;
+  left: 30%;
+}
+
+/* Float the head section to the right */
+.header-right 
+{
+  float: right;
+  position: relative;
+  bottom: 20px;
+  right: 70px;
+}
+
+
+
+/* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */ 
+@media screen and (max-width: 500px) {
+  .header a 
+  {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+ 
+}
+
+ /* sidenav */
+.sidenav {
+  height: 80%;
+  width: 232px;
+  position: fixed;
+  top: 144px;
+  left: 0;
+  background-color: #f1f1f1;
+  padding-top: 20px;
+}
+
+.sidenav a {
+  padding: 12px 16px 12px 19px;
+  text-decoration: none;
+  font-family: "Lucida Sans", Monaco, monospace;
+  font-size: 25px;
+  color: #563D64;
+  display: block;
+  position: relative;
+  top: 7px;
+}
+
+.sidenav a:hover {
+  color: #818181;
+}
+
+.info
+{
+  float: center;
+  font-family: "Lucida Sans", Monaco, monospace;
+  position: relative;
+  top: 15px;
+  left: 260px;
+  font-size: 25px;
+  color: #563D64;
+}	
+
+
+form input[type="submit"] {
+    background: rgb(254,231,154);
+    background: -moz-linear-gradient(top,  rgba(254,231,154,1) 0%, rgba(254,193,81,1) 100%);
+    background: -webkit-linear-gradient(top,  rgba(254,231,154,1) 0%,rgba(254,193,81,1) 100%);
+    background: -o-linear-gradient(top,  rgba(254,231,154,1) 0%,rgba(254,193,81,1) 100%);
+    background: -ms-linear-gradient(top,  rgba(254,231,154,1) 0%,rgba(254,193,81,1) 100%);
+    background: linear-gradient(top,  rgba(254,231,154,1) 0%,rgba(254,193,81,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fee79a', endColorstr='#fec151',GradientType=0 );
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+    border-radius: 30px;
+    -webkit-box-shadow: 0 1px 0 rgba(255,255,255,0.8) inset;
+    -moz-box-shadow: 0 1px 0 rgba(255,255,255,0.8) inset;
+    -ms-box-shadow: 0 1px 0 rgba(255,255,255,0.8) inset;
+    -o-box-shadow: 0 1px 0 rgba(255,255,255,0.8) inset;
+    box-shadow: 0 1px 0 rgba(255,255,255,0.8) inset;
+    border: 1px solid #D69E31;
+    color: #85592e;
+    cursor: pointer;
+    float: left;
+    font: bold 15px Helvetica, Arial, sans-serif;
+    height: 35px;
+    margin: 20px 0 35px 15px;
+    position: relative;
+	left: 250px;
+    text-shadow: 0 1px 0 rgba(255,255,255,0.5);
+    width: 150px;
+}
+form input[type="submit"]:hover 
+{
+    background: rgb(254,193,81);
+    background: -moz-linear-gradient(top,  rgba(254,193,81,1) 0%, rgba(254,231,154,1) 100%);
+    background: -webkit-linear-gradient(top,  rgba(254,193,81,1) 0%,rgba(254,231,154,1) 100%);
+    background: -o-linear-gradient(top,  rgba(254,193,81,1) 0%,rgba(254,231,154,1) 100%);
+    background: -ms-linear-gradient(top,  rgba(254,193,81,1) 0%,rgba(254,231,154,1) 100%);
+    background: linear-gradient(top,  rgba(254,193,81,1) 0%,rgba(254,231,154,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fec151', endColorstr='#fee79a',GradientType=0 );
+}
+
